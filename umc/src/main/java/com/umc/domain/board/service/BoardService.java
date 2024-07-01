@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 public class BoardService {
     private final BoardRepository boardRepository;
 
-
     @Transactional
     public ApiResponse<BoardResponseDTO> createBoard(BoardRequestDTO request){
         Board board=Board.builder()

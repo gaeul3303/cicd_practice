@@ -22,6 +22,10 @@ public class Comment extends BaseTimeEntity {
     @Column
     private String content;
 
+    private Integer readNum;
+
+    private Integer goodNum;
+
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="member_id")
     private Member member;
@@ -33,4 +37,5 @@ public class Comment extends BaseTimeEntity {
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="post_id")
     private Post post;
+
 }
