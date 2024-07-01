@@ -32,5 +32,9 @@ public class Board extends BaseTimeEntity {
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
     private List<Comment> commentList = new ArrayList<>();
 
+    public void update(String title){
+        this.title = title;
+    }
+
 
 }
